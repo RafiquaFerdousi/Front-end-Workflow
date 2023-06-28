@@ -45,20 +45,19 @@ styleAndCelebrate('ef7c8e', 'fae8e0', '30px', 'You made it!', 'champions');
 
 // Task 1: Code a Person class
 class Person {
-    constructor(name = "Tom", age = 20, energy = 100) {
-        this.name = name;
-        this.age = age;
-        this.energy = energy;
-    }
+  constructor(name = "Tom", age = 20, energy = 100) {
+    this.name = name;
+    this.age = age;
+    this.energy = energy;
+  }
 
-    sleep() {
-        this.energy += 10;
-    }
-  
-    doSomethingFun() {
-        this.energy -= 10;
-    }
-    
+  sleep() {
+    this.energy += 10;
+  }
+
+  doSomethingFun() {
+    this.energy -= 10;
+  }
 }
 
 const person = new Person();
@@ -67,15 +66,15 @@ person.doSomethingFun();
 
 // Task 2: Code a Worker class
 class Worker extends Person {
-    constructor(name = "Tom", age = 20, energy = 100, xp = 0, hourlyWage = 10) {
-        super(name, age, energy);
-        this.xp = xp;
-        this.hourlyWage = hourlyWage;
-    }
+  constructor(name = "Tom", age = 20, energy = 100, xp = 0, hourlyWage = 10) {
+    super(name, age, energy);
+    this.xp = xp;
+    this.hourlyWage = hourlyWage;
+  }
 
-    goToWork() {
-        this.xp += 10;
-    }
+  goToWork() {
+    this.xp += 10;
+  }
 }
 const worker = new Worker();
 worker.goToWork();
@@ -87,9 +86,23 @@ function intern() {
   return internObject;
 }
 
+const internObj = intern();
+console.log(internObj.name);
+console.log(internObj.age);
+console.log(internObj.energy);
+console.log(internObj.xp);
+console.log(internObj.hourlyWage);
+
 // Task 4: Code a manager object, methods
 function manager() {
-    const managerObject = new Worker("Alice", 30, 120, 100, 30);
-  internObject.doSomethingFun();
+  const managerObject = new Worker("Alice", 30, 120, 100, 30);
+  managerObject.doSomethingFun();
   return managerObject;
 }
+
+const managerObj = manager();
+console.log(managerObj.name);
+console.log(managerObj.age);
+console.log(managerObj.energy);
+console.log(managerObj.xp);
+console.log(managerObj.hourlyWage);
