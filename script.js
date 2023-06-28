@@ -107,44 +107,37 @@ console.log(managerObj.energy);
 console.log(managerObj.xp);
 console.log(managerObj.hourlyWage);
 
-//Deconstructing Arrays
 
-// Step 1: Iterate over an array using the for...of loop
+//Deconstructing Arrays
+var dairy = ['cheese', 'sour cream', 'milk', 'yogurt', 'ice cream', 'milkshake'];
+
 function logDairy() {
-  var dairy = ['cheese', 'sour cream', 'milk', 'yogurt', 'ice cream', 'milkshake'];
-  
-  for (const item of dairy) {
-    console.log(item);
-  }
+    for (var i of dairy) {
+        console.log(i);
+    }
 }
 logDairy();
 
-// Step 2: Iterate over object properties using the for...of loop
+// Task 2
 const animal = {
-  canJump: true
-};
-
+canJump: true
+}
 const bird = Object.create(animal);
+
 bird.canFly = true;
 bird.hasFeathers = true;
 
 function birdCan() {
-  for (prop of Object.keys(bird)) {
-    console.log(prop, ":" , bird[prop]);
-    
-  }
+    for (prop of Object.keys(bird)) {
+        console.log(prop + ": " + bird[prop]);
+    }
 }
-
 birdCan();
 
-// Step 3: Iterate over object properties and its prototype properties using the for...in loop
+// Task 3
 function animalCan() {
-  for (const key in bird) {
-    console.log(`${key}: ${bird[key]}`);
-  }
-  for (const key in bird.__proto__) {
-    console.log(`${key}: ${bird.__proto__[key]}`);
-  }
+    for (prop in bird) {
+        console.log(prop + ": " + bird[prop]);
+    }
 }
-
 animalCan();
