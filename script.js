@@ -222,3 +222,24 @@ function getDiscount(taxBoolean, guests) {
 // Call getDiscount()
 getDiscount(true, 2);
 getDiscount(false, 10);
+
+// components and modular programming
+function Heading() {
+    return (
+        <h1>This is an h1 heading</h1>
+    )
+}
+export default Heading;
+
+import Heading from "./Heading";
+
+function App() {
+  return (
+    <div className="App">
+      <Heading />
+    </div>
+  );
+}
+
+export default App;
+
