@@ -239,7 +239,29 @@ function App() {
       <Heading />
     </div>
   );
+
+\\props
+    import Heading from "./Heading";
+
+function App() {
+  return (
+    <div className="App">
+      <Heading firstName="Bob" />
+      <Heading firstName="Any name other than Bob" />
+    </div>
+  );
 }
 
 export default App;
+}
+
+export default App;
+
+function Heading(props) {
+    return (
+        <h1>Hello, {props.firstName}</h1>
+    )
+}
+
+export default Heading;
 
